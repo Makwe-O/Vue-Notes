@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "date-fns": "^2.9.0",
+    "uuid": "^3.4.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

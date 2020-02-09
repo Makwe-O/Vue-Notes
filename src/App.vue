@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <TextBox :createNote="createNote" />
-    <CardGrid :quoteList="quotes" :viewNote="viewNote" />
+    <CardGrid :quoteList="quotes" :viewNote="viewNote" :deleteNote="deleteNote" />
     <ViewCard :selectedNote="selectedNote" />
   </div>
 </template>
@@ -63,10 +63,11 @@ export default {
       });
     },
     viewNote(note) {
-      // eslint-disable-next-line no-console
-      console.log(note.id);
       let foundNote = this.quotes.find(quote => quote.id === note.id);
       this.selectedNote = foundNote;
+    },
+    deleteNote(note) {
+      this.quotes = this.quotes.filter(quote => quote.id != note.id);
     }
   }
 };

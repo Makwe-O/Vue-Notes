@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Selected Note</h2>
-    <p>{{selectedNote.text}}</p>
+    <p v-if="selectedNote">{{selectedNote.text}}</p>
   </div>
 </template>
 

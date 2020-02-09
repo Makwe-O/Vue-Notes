@@ -13,7 +13,7 @@
           <img src="../assets/eye.svg" width="20px" />
         </figure>
       </button>
-      <button class="card__options__icon">
+      <button @click="deleteNote(qouteDetail)" class="card__options__icon">
         <figure>
           <img src="../assets/bin.svg" width="20px" />
         </figure>
@@ -27,7 +27,8 @@ export default {
   name: "Card",
   props: {
     qouteDetail: Object,
-    viewNote: Function
+    viewNote: Function,
+    deleteNote: Function
   }
 };
 </script>

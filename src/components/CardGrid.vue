@@ -5,6 +5,7 @@
       v-for="quote in quoteList"
       v-bind:key="quote.id"
       :viewNote="viewNote"
+      :deleteNote="deleteNote"
     />
   </div>
 </template>
@@ -17,7 +18,8 @@ export default {
   },
   props: {
     quoteList: Array,
-    viewNote: Function
+    viewNote: Function,
+    deleteNote: Function
   }
 };
 </script>

@@ -4,18 +4,20 @@
       :qouteDetail="quote"
       v-for="quote in quoteList"
       v-bind:key="quote.id"
+      :viewNote="viewNote"
     />
   </div>
 </template>
 <script>
-import Card from './Card';
+import Card from "./Card";
 export default {
-  name: 'CardGrid',
+  name: "CardGrid",
   components: {
     Card
   },
   props: {
-    quoteList: Array
+    quoteList: Array,
+    viewNote: Function
   }
 };
 </script>
@@ -26,5 +28,6 @@ export default {
   max-width: 960px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 30px;
 }
 </style>

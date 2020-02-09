@@ -3,7 +3,7 @@
     <figure>
       <img src="../assets/logo.svg" alt="logo" width="50px" />
     </figure>
-    <a>Link to Github</a>
+    <a href="https://github.com/Makwe-O/Vue-Notes" target="_blank">Link to Github</a>
   </nav>
 </template>
 

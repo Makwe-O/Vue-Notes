@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="createNote(newNote)">
-    <h2>Enter Your Note in the form below</h2>
+    <h2>Add Your Note in the form below</h2>
     <textarea name="quote" cols="50" rows="10" v-model="newNote"></textarea>
     <button type="submit">Submit</button>
   </form>

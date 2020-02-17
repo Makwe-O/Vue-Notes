@@ -2,7 +2,9 @@
   <div id="app">
     <Header />
     <TextBox :createNote="createNote" />
-    <CardGrid :quoteList="quotes" :viewNote="viewNote" :deleteNote="deleteNote" />
+    <transition name="fade" appear>
+      <CardGrid :quoteList="quotes" :viewNote="viewNote" :deleteNote="deleteNote" />
+    </transition>
     <ViewCard :selectedNote="selectedNote" />
   </div>
 </template>
@@ -83,5 +85,18 @@ export default {
   max-width: 1024px;
   padding: 0 30px;
   margin: 0 auto;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 2s;
+}
+.fade-leave {
+}
+.fade-leave-active {
+  transition: opacity 2s;
+  opacity: 0;
 }
 </style>
